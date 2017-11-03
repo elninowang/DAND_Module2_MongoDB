@@ -25,3 +25,50 @@ find_porsche.py
 
 如果你想在本地机器上运行代码，你需要安装 MongoDB 并下载和插入数据集。要了解 MongoDB 设置和数据集方面的说明，请参阅课程资料，链接如下：https://www.udacity.com/wiki/ud032
 你可以查看 example_car.json 文件（第二个文件选项卡），找到作为查询依据的正确字段。
+
+### 准备数据
+
+processing.py
+
+问题描述
+
+在此习题集中，你将处理另一种类型的 infobox 数据，审核、清理数据，并得出一种数据模型，将数据插入 MongoDB，然后对数据库运行一些查询。数据集中包含关于蛛形纲动物的数据。
+
+对于这道练习，你的任务是解析文件，仅处理 FIELDS 字典中作为键的字段，并返回清理后的值字典列表。
+
+你应该完成以下几个步骤：
+
+- 根据 FIELDS 字典中的映射更改字典的键
+- 删掉“rdf-schema#label”中的小括号里的多余说明，例如“(spider)”
+- 如果“name”为“NULL”，或包含非字母数字字符，将其设为和“label”相同的值。
+- 如果字段的值为“NULL”，将其转换为“None”
+- 如果“synonym”中存在值，应将其转换为数组（列表），方法是删掉“{}”字符，并根据“|” 拆分字符串。剩下的清理方式将由你自行决定，例- 如删除前缀“*”等。如果存在单数同义词，值应该依然是列表格式。
+- 删掉所有字段前后的空格（如果有的话）
+- 输出结构应该如下所示：
+
+```javascript
+[ { 'label': 'Argiope',
+    'uri': 'http://dbpedia.org/resource/Argiope_(spider)',
+    'description': 'The genus Argiope includes rather large and spectacular spiders that often ...',
+    'name': 'Argiope',
+    'synonym': ["One", "Two"],
+    'classification': {
+                      'family': 'Orb-weaver spider',
+                      'class': 'Arachnid',
+                      'phylum': 'Arthropod',
+                      'order': 'Spider',
+                      'kingdom': 'Animal',
+                      'genus': None
+                      }
+  },
+  { 'label': ... , }, ...
+]
+```
+
+### 向 MongoDB 插入数据
+
+dbinsert.py
+
+问题描述
+
+完成 insert_data 函数，将数据插入 MongoDB。
