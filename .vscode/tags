@@ -12,9 +12,11 @@ MongoClient	find_porsche.py	/^    from pymongo import MongoClient$/;"	kind:names
 MongoClient	insert.py	/^    from pymongo import MongoClient$/;"	kind:namespace	line:20
 MongoClient	match_project.py	/^    from pymongo import MongoClient$/;"	kind:namespace	line:35
 MongoClient	push.py	/^    from pymongo import MongoClient$/;"	kind:namespace	line:29
+MongoClient	same.py	/^    from pymongo import MongoClient$/;"	kind:namespace	line:29
 MongoClient	unwind.py	/^    from pymongo import MongoClient$/;"	kind:namespace	line:28
 aggregate	match_project.py	/^def aggregate(db, pipeline):$/;"	kind:function	line:54
-aggregate	push.py	/^def aggregate(db, pipeline):$/;"	kind:function	line:39
+aggregate	push.py	/^def aggregate(db, pipeline):$/;"	kind:function	line:44
+aggregate	same.py	/^def aggregate(db, pipeline):$/;"	kind:function	line:45
 aggregate	unwind.py	/^def aggregate(db, pipeline):$/;"	kind:function	line:44
 autos.py	autos.py	1;"	kind:file	line:1
 clean_dimension	autos.py	/^def clean_dimension(d, field, v):$/;"	kind:function	line:64
@@ -38,6 +40,7 @@ find_porsche.py	find_porsche.py	1;"	kind:file	line:1
 get_db	find_porsche.py	/^def get_db(db_name):$/;"	kind:function	line:22
 get_db	match_project.py	/^def get_db(db_name):$/;"	kind:function	line:34
 get_db	push.py	/^def get_db(db_name):$/;"	kind:function	line:28
+get_db	same.py	/^def get_db(db_name):$/;"	kind:function	line:28
 get_db	unwind.py	/^def get_db(db_name):$/;"	kind:function	line:27
 insert.py	insert.py	1;"	kind:file	line:1
 insert_autos	insert.py	/^def insert_autos(infile, db):$/;"	kind:function	line:12
@@ -49,6 +52,7 @@ json	dbinsert.py	/^import json$/;"	kind:namespace	line:5
 json	processing.py	/^import json$/;"	kind:namespace	line:49
 make_pipeline	match_project.py	/^def make_pipeline():$/;"	kind:function	line:40
 make_pipeline	push.py	/^def make_pipeline():$/;"	kind:function	line:34
+make_pipeline	same.py	/^def make_pipeline():$/;"	kind:function	line:34
 make_pipeline	unwind.py	/^def make_pipeline():$/;"	kind:function	line:33
 match_project.py	match_project.py	1;"	kind:file	line:1
 mm_to_meters	autos.py	/^def mm_to_meters(v):$/;"	kind:function	line:59
@@ -60,7 +64,8 @@ pprint	autos.py	/^import pprint$/;"	kind:namespace	line:6
 pprint	find_porsche.py	/^    import pprint$/;"	kind:namespace	line:40
 pprint	match_project.py	/^    import pprint$/;"	kind:namespace	line:62
 pprint	processing.py	/^import pprint$/;"	kind:namespace	line:50
-pprint	push.py	/^    import pprint$/;"	kind:namespace	line:47
+pprint	push.py	/^    import pprint$/;"	kind:namespace	line:52
+pprint	same.py	/^    import pprint$/;"	kind:namespace	line:56
 pprint	unwind.py	/^    import pprint$/;"	kind:namespace	line:52
 process_file	autos.py	/^def process_file(input_file):$/;"	kind:function	line:141
 process_file	insert.py	/^from autos import process_file$/;"	kind:namespace	line:9
@@ -69,6 +74,7 @@ processing.py	processing.py	1;"	kind:file	line:1
 push.py	push.py	1;"	kind:file	line:1
 re	autos.py	/^import re$/;"	kind:namespace	line:5
 re	processing.py	/^import re$/;"	kind:namespace	line:51
+same.py	same.py	1;"	kind:file	line:1
 skip_lines	autos.py	/^def skip_lines(input_file, skip):$/;"	kind:function	line:33
 strip_automobile	autos.py	/^def strip_automobile(v):$/;"	kind:function	line:44
 strip_city	autos.py	/^def strip_city(v):$/;"	kind:function	line:47
